@@ -1,5 +1,16 @@
-const dataAp = unknown;
+let dataApi: unknown;
 
-if(unknown === "") {
-    
+if (dataApi === null) {
+  console.log("Il dato è vuoto");
+} else if (Array.isArray(dataApi)) {
+  console.log(dataApi.length);
+} else if (typeof dataApi === "string") {
+  console.log(dataApi.toUpperCase());
+} else if (typeof dataApi === "number") {
+  console.log(dataApi * 2);
+} else if (typeof dataApi === "boolean") {
+  console.log(dataApi ? "Sì" : "No");
+} else {
+  console.log("Tipo non supportato");
 }
+
