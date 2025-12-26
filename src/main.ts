@@ -14,3 +14,13 @@ if (dataApi === null) {
   console.log("Tipo non supportato");
 }
 
+type Dipendente =  {
+    nome: string,
+    cognome: string,
+    annoNascita: number,
+    sesso: "m" | "f",
+    anniDiServizio: number[],
+    readonly emailAziendale: string,
+    contratto: "intedetermianto" | "determianto" | "freelance";
+}
+
