@@ -24,3 +24,21 @@ type Dipendente =  {
     contratto: "intedetermianto" | "determianto" | "freelance";
 }
 
+type Developer = Dipendente & {
+    livelloEsperienza: "Junior" | "Mid" | "Senior",
+    linguaggi?: string[],
+    certificazioni: string[]
+}
+
+type ProjectManager = Dipendente & {
+    teamSize: number | null,
+    budgetGestito?: number
+    stakeholderPrincipali: string[]
+}
+
+type Team = {
+    nomeTeam: string,
+    progettoAttuale: string | null,
+    budget: number,
+    membri: [ProjectManager, Developer, ...Developer[]]
+}
