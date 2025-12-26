@@ -4,7 +4,11 @@ if (dataApi === null) {
   console.log("Il dato è vuoto");
 } else if (Array.isArray(dataApi)) {
   console.log(dataApi.length);
-} else if (typeof dataApi === "string") {
+} else if (dataApi instanceof Promise) {
+    dataApi.then((messaggio) => console.log(messaggio) )
+} 
+
+else if (typeof dataApi === "string") {
   console.log(dataApi.toUpperCase());
 } else if (typeof dataApi === "number") {
   console.log(dataApi * 2);
